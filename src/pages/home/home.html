@@ -1,0 +1,23 @@
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 align-items-center text-center>
+        <ion-card>
+          <ion-card-title>
+            <ion-title>Reader</ion-title>
+          </ion-card-title>
+          <ion-card-content>
+            <img src="{{ src }}" alt="">
+            <button (click)="pick()" ion-button full>Carregar imagem</button>
+            <button (click)="analizar()" ion-button full>Teste</button>
+          </ion-card-content>
+        </ion-card>
+        <ion-card *ngIf="output">
+          <ion-card-content>
+            {{result}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
